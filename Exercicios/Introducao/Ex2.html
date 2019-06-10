@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <h1>Olá!</h1>
+    <h2>
+      Utilize uma destas opções para para ver o resultado em console:
+    </h2>
+    <ul>
+      <li>
+        Clique com o botão direito do mouse nesta tela e selecione a opção
+        "Inspecionar". Em seguida, abra a aba console.
+      </li>
+      <li>Aperte a tecla F12 e abra a aba console.</li>
+    </ul>
+
+    <!-- Início de scripts -->
+    <script>
+      function pares(x, y) {
+        while (x <= y) {
+          resultadosPares = x % 2;
+          if (resultadosPares == 0) {
+            console.log(x);
+          }
+
+          x++;
+        }
+      }
+
+      pares(32, 321);
+    </script>
+  </body>
+</html>
