@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <h1>Olá!</h1>
+    <h2>
+      Utilize uma destas opções para para ver o resultado em console:
+    </h2>
+    <ul>
+      <li>
+        Clique com o botão direito do mouse nesta tela e selecione a opção
+        "Inspecionar". Em seguida, abra a aba console.
+      </li>
+      <li>Aperte a tecla F12 e abra a aba console.</li>
+    </ul>
+
+    <!-- Início de scripts -->
+    <script>
+      // = é utilizado para atribuição de valor (Ex: x receberá e passara a ser o valor 1 (x = 1))
+      // == é utilizado para comparação de valor (Ex: x é igual a 2? (x == 2))
+      // === é utilizado para comparação de valor e tipo (Ex: x é uma String com o conteúdo igual a "m"? (x === m))
+
+      // ------------------------------ //
+      var sexo = "M",
+        idade = 23;
+
+      // && = E
+      if (sexo === "M" && idade >= 18) {
+        console.log('Ok para verificação "e"');
+      }
+
+      // || = ou
+      if (sexo === "M" || idade >= 18) {
+        console.log('Ok para verificação "ou"');
+      }
+
+      // != ou !== - diferente de, ou, diferente do tipo e valor
+      if (sexo === "M") {
+        console.log(
+          'Este texto é exibido apenas se sexo for igual e do mesmo tipo que "M". Experimente trocar o valor da varrável sexo para exibir o texto da condição de diferença'
+        );
+      } else if (sexo != "M") {
+        console.log(
+          'Este texto não será exibido, pois sexo é igual a "M". Experimente alterar o valor da vaiável para ver o resuldado.'
+        );
+      }
+
+      // Realizando uma verificação em uma variável
+      // Esta verificação do valor e tipagem da variável sexo (sexo === "M") retornará um valor Boolean (true ou false) e o atibuirá para a variável masculino
+      var masculino = sexo === "M";
+      console.log("é masculino?" + masculino);
+    </script>
+  </body>
+</html>
