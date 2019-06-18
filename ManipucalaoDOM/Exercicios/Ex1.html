@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <div id="app">
+      <button>Clique aqui</button>
+    </div>
+
+    <!-- Início de scripts -->
+    <script>
+        var btnElement = document.querySelector('#app button');
+        var containerElement = document.querySelector('#app');
+            console.log(containerElement);
+        
+        btnElement.onclick = function(){
+            let squareElement = document.createElement
+            ('div');
+
+            squareElement.style.width = '100px';
+            squareElement.style.height = '100px';
+            squareElement.style.backgroundColor = '#f00';
+            containerElement.appendChild(squareElement);
+        }
+    </script>
+  </body>
+</html>
