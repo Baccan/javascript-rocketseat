@@ -21,26 +21,28 @@
         var inputElement = document.querySelector('input[name=nome]');
         var listaElement = document.createElement('ul');
         
-        for (const nome of nomes) {
-            let listaElement = document.createElement('li');
-            let itemText = document.createTextNode(nome)
+        function additem(text){
+          let listaElement = document.createElement('li');
+          let itemText = document.createTextNode(text)
 
-            listaElement.appendChild(itemText);
+          listaElement.appendChild(itemText);
 
-            containerElement.appendChild(listaElement);
+          containerElement.appendChild(listaElement);
         }
 
         // btnAdicionar - Adiciona item a lista
         function adicionar() {
-          let listaElement = document.createElement('li');
           let inputValue = inputElement.value;
-          let newItem = document.createTextNode(inputValue);
-          
-          if (inputElement.value){
-           listaElement.appendChild(newItem);
-           containerElement.appendChild(listaElement);
-           inputElement.value = '';
+
+          if (inputValue) {
+            additem(inputValue);
+            inputValue = '';
           }
+        }
+
+        // monstrar nomes em lista ul>li
+        for (const nome of nomes) {
+          additem(nome);
         }
     </script>
   </body>
