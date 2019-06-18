@@ -8,14 +8,17 @@
   </head>
   <body>
     <div id="app">
-      
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
     </div>
 
     <!-- Início de scripts -->
     <script>
         var nomes = ["Diego", "Gabriel", "Lucas"];
         
+        // Criação da lista
         var containerElement = document.querySelector('#app');
+        var inputElement = document.querySelector('input[name=nome]');
         var listaElement = document.createElement('ul');
         
         for (const nome of nomes) {
@@ -25,6 +28,19 @@
             listaElement.appendChild(itemText);
 
             containerElement.appendChild(listaElement);
+        }
+
+        // btnAdicionar - Adiciona item a lista
+        function adicionar() {
+          let listaElement = document.createElement('li');
+          let inputValue = inputElement.value;
+          let newItem = document.createTextNode(inputValue);
+          
+          if (inputElement.value){
+           listaElement.appendChild(newItem);
+           containerElement.appendChild(listaElement);
+           inputElement.value = '';
+          }
         }
     </script>
   </body>
