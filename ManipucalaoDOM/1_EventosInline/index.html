@@ -7,21 +7,31 @@
     <title>Curso Javascript</title>
   </head>
   <body>
-    <h1>Olá!</h1>
-    <h2>
-      Utilize uma destas opções para para ver o resultado em console:
-    </h2>
-    <ul>
-      <li>
-        Clique com o botão direito do mouse nesta tela e selecione a opção
-        "Inspecionar". Em seguida, abra a aba console.
-      </li>
-      <li>Aperte a tecla F12 e abra a aba console.</li>
-    </ul>
+    <div id="app">
+      <button onclick="cliqueAlerta()">Clique aqui</button>
+      <br>
+      <br>
+      
+      <button onmouseover="hoverAlerta()">Passe por aqui</button>
+      <br>
+      
+      <p>Digite aqui!</p>
+      <input type="text" onkeypress="keyAlerta()" />
+    </div>
 
     <!-- Início de scripts -->
     <script>
-      
+      function cliqueAlerta() {
+        alert('Botão foi clicado!');
+      }
+
+      function hoverAlerta() {
+        alert('Você passou pelo botão!');
+      }
+
+      function keyAlerta() {
+        alert('Você digitou algo!');
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="nome" id="nome" class="input-nome">
+      <button class="botao">Adicionar</button>
+    </div>
+
+    <!-- Início de scripts -->
+    <script>
+      var inputElement = document.querySelector('input[name=nome]');
+      var btnElement = document.querySelector('button.botao');
+
+      btnElement.onclick = function () {
+        let text = inputElement.value;
+        alert("texto do input: " + text);
+      }
+
+      // ------------------------------- //
+
+      // Descomente os consoles para ver o resultado
+      // QuerySelector - Percorre a DOM
+      var inputElementQueryInput = document.querySelector('body div#app input');
+      // console.log("querySelector 'body div#app input': ");
+      // console.log(inputElementQueryInput);
+
+      var inputElementQueryTag = document.querySelector('input[name=nome]');
+      // console.log("querySelector 'input[name=nome]': ");
+      // console.log(inputElementQueryTag);
+
+      var inputElementQueryAll = document.querySelectorAll('input[name=nome]');
+      // console.log("querySelectorAll 'input[name=nome]': ");
+      // console.log(inputElementQueryAll);
+
+      // ------------------------------- //
+      
+      // Outras Formas
+      // ById
+      var inputElementId = document.getElementById('nome');
+      // console.log("getElementById 'nome': ");
+      // console.log(inputElementId);
+
+      // TagName
+      var inputElementTag = document.getElementsByTagName('input')[0];
+      // console.log("getElementsByTagName 'input' na posição 0: ");
+      // console.log(inputElementTag);
+
+      // ClassName
+      var inputElementClass = document.getElementsByClassName('input-nome')[0];
+      // console.log("inputElementClass 'input-nome' na posição 0: ");
+      // console.log(inputElementClass);
+      
+    </script>
+  </body>
+</html>
