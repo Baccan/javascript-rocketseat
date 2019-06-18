@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <div id="app">
+      <button>Clique aqui</button>
+    </div>
+
+    <!-- Início de scripts -->
+    <script>
+        var btnElement = document.querySelector('#app button');
+        var containerElement = document.querySelector('#app');
+        
+        // btnElement - Criar quadrado
+        btnElement.onclick = function(){
+            var squareElement = document.createElement
+            ('div');
+            squareElement.style.width = '100px';
+            squareElement.style.height = '100px';
+            squareElement.style.backgroundColor = '#f00';
+
+            // squareElement - Alterar cor onHover
+            squareElement.onmouseover = function(){
+                squareElement.style.backgroundColor = getRandomColor();
+            }
+
+            containerElement.appendChild(squareElement);
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+            return color;
+        }
+    </script>
+  </body>
+</html>
